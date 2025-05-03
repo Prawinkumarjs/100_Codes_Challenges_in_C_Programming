@@ -1,0 +1,35 @@
+//Simple_Calculator_using_switch_case
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    char operation;
+    printf("enter the num1 : ");
+    scanf("%d", &num1);
+    printf("enter the num2 : ");
+    scanf("%d", &num2);
+    printf("Enter the operation to perform : ");
+    scanf(" %c", &operation);
+    
+    switch (operation){
+        case '+':
+            printf("The Answer is : %d", num1+num2);
+            break;
+            
+        case '-':
+            printf("The Answer is : %d", num1-num2);
+            break;
+            
+        case '*':
+            printf("The Answer is : %d", num1*num2);
+            break;
+        case '/':
+            printf("The Answer is : %d", num1/num2);
+            break;
+        
+        default :
+        printf("Invalid operation");
+    }
+
+    return 0;
+}
