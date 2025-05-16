@@ -1,0 +1,52 @@
+int main() {
+
+int** arr = malloc(6 * sizeof(int*));
+
+for (int i = 0; i < 6; i++) {
+    *(arr + i) = malloc(6 * (sizeof(int)));
+
+    char** arr_item_temp = split_string(rtrim(readline()));
+
+    for (int j = 0; j < 6; j++) {
+        int arr_item = parse_int(*(arr_item_temp + j));
+
+        *(*(arr + i) + j) = arr_item;
+    }
+}
+
+int countk = 0;
+int countl = 0;
+int sum = 0;
+int sum_max = -63;
+int k = 0;
+int l = 0;
+
+for (int i = 0; i < 4; i++) {
+
+    for (int j = 0; j < 4; j++) {
+            countk = 0;
+            for (k=i; k < i+3; k++) {
+                countl = 0;
+                countk++;
+                for (l=j; l < j+3; l++) {
+                    countl++;
+                    if(countk==2){
+                        if (countl==2) {
+                        sum+= *(*(arr + k)+l);
+                        }
+                    }else {
+                        sum+= *(*(arr + k)+l);
+                    }         
+                }//end for l
+            }//end for k
+        if(sum>sum_max){
+            sum_max=sum;
+        }
+        sum=0;    
+    }//end for j
+}//end for i 
+
+printf("%i",sum_max);
+
+return 0;
+}
