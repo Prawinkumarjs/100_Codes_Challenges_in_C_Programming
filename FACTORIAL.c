@@ -1,4 +1,4 @@
-// factorial using while loop
+// factorial using while loop 
 #include <stdio.h>
 
 int main()
