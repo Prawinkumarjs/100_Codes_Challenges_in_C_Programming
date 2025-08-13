@@ -1,6 +1,6 @@
 # 100_Codes_Challenges_in_C_Programming
 
-# 100+ Code Challenges in C
+ ### 100+ Code Challenges in C
 
 A curated collection of **100+ essential C programming problems** implemented with clean, beginner-friendly code.  
 Perfect for practicing core concepts, preparing for technical interviews, or solidifying your C programming skills.
